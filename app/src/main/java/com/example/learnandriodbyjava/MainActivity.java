@@ -353,4 +353,24 @@ public class EmployeeOne{
     }
 }
 
+//JAVA修饰符
+public class JAVA_Modifier{
+    private boolean myFlag;
+    static final double weeks = 9.5;
+    protected static  final int BOXWIDTH = 53;
+    public static void main(String[] args){
+        //
+    }
+}
 
+//私有访问修饰符 -private
+public class Logger{
+    private String format;
+    public String getFormat(){
+        return this.format;
+    }
+
+    public void setFormat (String format){
+        this.format = format;
+    }
+}
