@@ -1,7 +1,6 @@
 package com.example.learnandriodbyjava;
 
 import android.os.Bundle;
-import android.os.StatFs;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -374,3 +373,61 @@ public class Logger{
         this.format = format;
     }
 }
+
+class  AudioPlayer{
+    protected void openSpeaker(){
+        //
+    }
+}
+class AudioPlayerSubClassStreamingAudioPlayer extends AudioPlayer{
+    protected void openSpeaker(){
+
+    }
+}
+/*
+父类声明为public的方法，子类也必须为public
+父类声明为protect的方法，子类只能声明为protect/public
+父类声明为private的方法，子类只能声明为private;
+ */
+/*
+非访问修饰符
+static final abstract synchronized
+*/
+
+public class InstanceCounter{
+    private static  int numInstance = 0;
+    protected static int getCount(){
+        return numInstance;
+    }
+    private static void addInstance(){
+        numInstance++;
+    }
+     InstanceCounter(){
+        InstanceCounter.addInstance();
+    }
+}
+
+abstract class Caravan{
+    private double price;
+    private String model;
+    private String year;
+    public abstract void goFast();
+    public abstract void changeColor();
+}
+
+public class MyRunnable implements Runnable{
+    private volatile boolean active;
+    public void run(){
+        while (active){
+            //
+        }
+
+    }
+    public void stop(){
+        active = false;
+    }
+    String name = "name";
+    boolean result = name instanceof String;
+
+}
+
