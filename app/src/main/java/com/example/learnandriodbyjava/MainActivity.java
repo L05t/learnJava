@@ -327,3 +327,30 @@ public class NewEmployee{
         emp.printEmp();
     }
 }
+
+/*
+JAVA类变量（静态变量）
+类变量也称静态变量，在类中已static 关键字声明，但必须在方法之外；
+无论一个类创建了多少个对象，类只拥有类变量的一份拷贝；
+静态变量除了被声明为常量外很少使用。常量是指声明为public/private,final,static类型的变量，常量初始化后不可改变
+静态变量在第一次被访问时创建，在程序结束时销毁，
+与实例变量具有相似的可见性。但为了对类的使用者可见，大多数静态变量声明为public类型
+默认值和实例变量相似。数值型变量默认为0，布尔型默认值是false,引用类型默认值是null。变量的值可以在声明的时候指定，
+也可以在构造方法中指定，此时静态变量还可以在静态语句块中初始化
+静态变量可以通过: ClassName.VariableName的方式访问
+类变量被声明为public static final 类型时，类变量名称一般建议使用大写字母。如果静态变量不是public和final类型，
+其命名方式与实例变量以及局部变量的命名方式一致
+ */
+
+public class EmployeeOne{
+    //salary is a private variable of static
+    private static double salary;
+    //DEPARTMENT is a constant
+    public static  final String DEPARMENT = "developer";
+    public static void main (String[] args){
+        salary = 10000;
+        System.out.println(DEPARMENT+"平均工资"+salary);
+    }
+}
+
+
