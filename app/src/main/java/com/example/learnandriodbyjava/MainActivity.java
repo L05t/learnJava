@@ -9,6 +9,11 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.Calendar;
+import java.util.Date;
+import java.text.*
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -474,5 +479,229 @@ public class whileClass {
                 System.out.println("hehhehe");
             }
         }
+    }
+}
+
+//JAVA Number & Math
+
+public class Number_Math {
+    public static void main (String[] args){
+        System.out.println("sin90度:"+Math.sin(Math.PI/2));
+        System.out.println("cos90度:"+Math.cos(Math.PI/2));
+        System.out.println("tan90度:"Math.tan(Math.PI/2));
+        System.out.println("cot90度:"Math.atan(Math.PI/2));
+    }
+}
+
+//JAVA String StingBuffer StringBuilder(String 类无法改变，一旦创建String对象，value是无法改变的，如果需要修改
+// 需要用StringBuffer & StringBuilt);
+public class StringClass {
+    public static void main(String[] args){
+        String site = "www.baidu.com";
+        int len = site.length();
+        System.out.println(site+"leng:"+len);
+        System.out.println(site.concat("wwwww"));
+
+        StringBuffer sBuffer = new StringBuffer("hhhhhh");
+        sBuffer.append("WWW");
+        sBuffer.append(".runoob");
+        sBuffer.append(".com");
+        System.out.println(sBuffer);
+
+        sBuffer.reverse(); // 将此字符序列用其反转形式取代
+
+        sBuffer.delete(1,3);//移除此序列的子字符串中的字符。
+
+        sBuffer.insert(1,3);//将 int 参数的字符串表示形式插入此序列中
+
+        sBuffer.replace(1,3,"333");
+    }
+}
+
+//JAVA 数组
+public class Array{
+    public static void main (String[] args){
+        double[] myList = new double[5];
+        double total = 0;
+        double[0] = 1.0;
+        double[1] = 1.3;
+        double[2] = 1.4;
+        double[3] = 3.9;
+        double[4] = 9.9;
+        for (int i = 0, i < 5,i ++){
+            total += double[i];
+        }
+        System.out.println(total);
+
+
+        double[] testList = {1.5,1.6,4.4,5.6,32.0,4.5};
+        //print all element
+        for (int i = 0;i < testList.length;i ++){
+            System.out.println(testList[i]);
+        }
+        //sum all element
+        double total = 0;
+        for (int i = 0;i < testList.length;i ++) System.out.println(total += testList[i]);
+
+        //check MAX value
+
+        double maxValue = testList[0];
+        for (int i = 0; i < testList.length;i ++)
+            if (testList[i] > maxValue) {
+                maxValue = testList[i];
+            }
+
+
+    }
+
+    public static  int[] reverse(int[] list){
+        int [] result = new int[list.length];
+        for (int i = 0;j < result.length-1;i < list.length;i ++,j--){
+            result[j] = list[i];
+        }
+        return result;
+    }
+
+
+    //多维数组
+    String str[][] = new String[3][4];
+}
+//JAVA日期时间
+public class JAVA_Date{
+    public static void main(String[] args){
+        Date();
+        Date(long millisec);
+        Date date = new Date();
+        System.out.println(date.toString());
+
+        Date dNow = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("yy-mm-dd hh:mm:ss");
+        System.out.println("localTime:".concat(sdf.format(dNow)));
+
+        System.out.println("全部日期和时间信息:%fc",date);
+        System.out.println("年-月-日格式:%tF",date);
+        System.out.println("月-日-年格式:%tD",date);
+        System.out.println("HH-MM-SS PM格式%tf",date);
+        System.out.println("HH:MM:SS (24h)格式,%tT",date);
+        System.out.println("HH:MM(24h)格式,%tR",date);
+
+        String str = String.format(Locale.US,"英文月份简称:%tb",date);
+        System.out.println(str);
+        System.out.println("本地月份简称:%tB",date);
+
+        str = String.format(Locale.US,"英文星期的简称:%ta",date);
+
+        System.out.println("本地月份全程%ta"+date);
+        System.out.println(str);
+
+    }
+}
+
+//JAVA_Calendar
+
+public class JAVA_Calendar{
+
+    Calendar c1 = new Calendar() {
+
+        int year = c1.get(Calendar.YEAR);
+        int month = c1.MONTH+1;
+        int date = c1.DATE;
+        int hour = c1.HOUR_OF_DAY;
+        int minute = c1.MINUTE;
+        int second =  c1.SECOND;
+        @Override
+        protected void computeTime() {
+
+        }
+
+        @Override
+        protected void computeFields() {
+
+        }
+
+        @Override
+        public void add(int field, int amount) {
+
+        }
+
+        @Override
+        public void roll(int field, boolean up) {
+
+        }
+
+        @Override
+        public int getMinimum(int field) {
+            return 0;
+        }
+
+        @Override
+        public int getMaximum(int field) {
+            return 0;
+        }
+
+        @Override
+        public int getGreatestMinimum(int field) {
+            return 0;
+        }
+
+        @Override
+        public int getLeastMaximum(int field) {
+            return 0;
+        }
+    }
+}
+
+//JAVA_正则表达式(略)
+
+//JAVA_方法
+
+public class FuncTest{
+    public static void main(String[] args) {
+        int i = 5; int j = 2;int k = max(i ,j);
+        System.out.println("maxValue:%d"+k);
+    }
+
+    public static int void max(int x,int y){
+        int result;
+        if (x>y)
+            return = x;
+        else
+            result = y;
+        return result;
+    }
+}
+
+public class TestPassByValue{
+    public class void main(String[] args) {
+        int num1 = 1;
+        int num2 = 2;
+        System.out.printf("before exchange:num1:%d,num2:%d", num1, num2);
+        System.out.printf("%d; %d; %d%n", -500, 2343L, iObj);
+    }
+    public static void swap(int x,int y){
+        System.out.println("enter");
+        System.out.printf("before:num1:%d;num2:%d",x,y);
+        int temp = x;
+        x = y;
+        y = temp;
+        System.out.printf("after:num1:%d;num2:%d",x,y);
+    }
+}
+
+
+public class VarargsDemo{
+    public static void main (String args[]){
+
+    }
+
+    public static void printMax(double...numbers){
+        if (numbers.length == 0)return;
+        double result = numbers[0];
+        for (int i = 1;i < numbers.length;i ++){
+            if (numbers[i] >result){
+                result = numbers[i];
+            }
+        }
+        System.out.println("The Max vaule is"+result);
     }
 }
