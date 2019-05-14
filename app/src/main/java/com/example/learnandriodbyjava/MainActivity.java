@@ -430,4 +430,49 @@ public class MyRunnable implements Runnable{
     boolean result = name instanceof String;
 
 }
+//JAVA 循环结构 -for,while,do...while
 
+public class whileClass {
+    public static void main(String[] args){
+
+        //while
+        int x = 10;
+        while (x<20){
+            System.out.println("value of x:"+x);
+            x++;
+            System.out.println("\n");
+        }
+
+        //do while (run once time at least)
+        do {
+            System.out.println("value of x:"+x);
+        }while (x<20);
+
+        //for循环
+        for (int x = 10,x < 20, x ++){
+            System.out.println("value of i :"+x);
+        }
+
+        //增强for循环
+
+        int [] numbers = {10,20,30,40,50};
+
+        for (int x:numbers){
+            System.out.println(x);
+            System.out.println(",");
+        }
+        String[] names = {"123","345",'345'};
+        for (String y : names){
+            System.out.println(y);
+        }
+        //break
+        double [] d = {123,345,345,234234};
+        for (double z:d){
+            if (z == 345){
+                break;
+            }else {
+                System.out.println("hehhehe");
+            }
+        }
+    }
+}
