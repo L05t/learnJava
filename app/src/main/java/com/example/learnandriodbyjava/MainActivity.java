@@ -11,9 +11,9 @@ import android.view.MenuItem;
 
 import java.util.Calendar;
 import java.util.Date;
-import java.text.*
+import java.text.*;
 import java.util.Locale;
-
+import java.util.Scanner;
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -705,3 +705,108 @@ public class VarargsDemo{
         System.out.println("The Max vaule is"+result);
     }
 }
+
+public class JAVA_Scanner{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        System.out.println("next:");
+        if (scan.hasNext()){
+            String stri1 = scan.next();
+            System.out.println("输入数据为:"+stri1);
+        }
+        scan.close();
+    }
+}
+
+class ScannerDemo{
+    public static void main (String [] args){
+        Scanner scan = new Scanner(System.in);
+        double sum = 0;
+        int m = 0;
+        while (scan.hasNextDouble()){
+            double x = scan.nextDouble();
+            m = m+1;
+            sum = sum + x;
+        }
+        System.out.println(m+"和"+sum);
+        System.out.println("平均值:"+(sum/m));
+        scan.close();
+}
+
+//JAVA_继承
+    /*
+    //企鹅类
+public class Penguin{
+    private String name;
+    private int id;
+    public Penguin(String penguinName,int penguinID){
+        this.name = penguinName;
+        this.id = penguinID;
+    }
+    public void eat() {
+        System.out.println(name + "eating");
+    }
+    public void sleep(){
+        System.out.println(name+"sleeping");
+    }
+    public void introduction(){
+        System.out.printf("i`m number :%d;u can call me :%s",id,name);
+
+    }
+}
+
+//老鼠
+public class Mouse{
+    private String name;
+    private int id;
+
+    public Mouse(String mouseName, int mouseId){
+        this.name = mouseName;
+        this.id = mouseId;
+    }
+
+    public void eat(){
+        System.out.print(name+"eating");
+    }
+    public void sleep(){
+        System.out.print(name+"sleeping");
+    }
+    public void introduction() {
+        System.out.printf("i`m number :%d;u can call me :%s",id,name);
+        System.out.printf("i`m number :%d;u can call me :%s",id,name);
+    }
+}
+*/
+
+public class Animail{
+    private String name;
+    private int age;
+    public Animail(String aniName,int aniAge){
+        this.name = aniName;
+        this.age = aniAge;
+    }
+    public void eat(){
+
+        System.out.print("eating");
+    }
+    public void sleep(){
+
+        System.out.print("sleeping");
+    }
+}
+
+public class Penguin extends Animail{
+    public Penguin(String penguinName, int penguinAge){
+
+        super(penguinName,penguinAge);
+    }
+}
+
+/*
+子类拥有父类非private 属性/方法
+子类可以拥有自己的属性和方法，即子类可以对父类进行扩展
+子类可以拥有自己的方式实现父类（override）
+Java 的继承是单继承，但是可以多重继承，单继承就是一个子类只能继承一个父类，多重继承就是，例如 A 类继承 B 类，B
+类继承 C 类，所以按照关系就是 C 类是 B 类的父类，B 类是 A 类的父类，这是 Java 继承区别于 C++ 继承的一个特性。
+提高了类之间的耦合性（继承的缺点，耦合度高就会造成代码之间的联系越紧密，代码独立性越差）
+ */
