@@ -810,3 +810,105 @@ Java 的继承是单继承，但是可以多重继承，单继承就是一个子
 类继承 C 类，所以按照关系就是 C 类是 B 类的父类，B 类是 A 类的父类，这是 Java 继承区别于 C++ 继承的一个特性。
 提高了类之间的耦合性（继承的缺点，耦合度高就会造成代码之间的联系越紧密，代码独立性越差）
  */
+
+//JAVA_构造器
+
+class SuperClass{
+    private int n;
+    SuperClass(){
+        System.out.print("SuperClass");
+    }
+
+    SuperClass(int n){
+        System.out.print("SuperClass(int n)");
+        this.n = n;
+    }
+}
+
+
+//SubClass 类继承
+class SubClass extends SuperClass{
+
+    private int n;
+    SuperClass(){
+        System.out.print("SubClass");
+    }
+
+    public SubClass(int n){
+        Super(300);
+        System.out.println("SubClass2");
+    }
+
+    public SubClass2(int n){
+        System.out.print("");
+        this.n = n;
+    }
+}
+
+public class TestSuperSub{
+
+    public static void main[String[] args]{
+
+        System.out.print("");
+        SubClass sc1 = new SubClass();
+        SubClass sc2 = new SubClass();
+    }
+}
+
+//JAVA_重写(Override)与重载(Overload)
+
+class Animal{
+    public void move(){
+        System.out.print("animal can move");
+    }
+}
+
+class Dog extends Animal{
+    public void move(){
+        System.out.print("");
+    }
+}
+
+public class TestDog{
+    public static void main(String[] args){
+        Animail a = new Animail();
+        Animail b = new Dog();
+        a.move();
+        ((Dog) b).move();
+    }
+}
+
+public class Overloading{
+    public int test(){ System.out.print("test1"); }
+
+    public void test(int a){ System.out.print("test2"); }
+
+    public String test(int a, String s){
+        System.out.print("test3");
+        return "test";
+    }
+
+    public String test(String s, int a){
+        System.out.print("test4");
+        return "test4";
+    }
+
+    public static void main(String[] args){
+        Overloading ol = new Overloading();
+        ol.test();
+        ol.test(1);
+        ol.test(2,"2");
+        ol.test("2",2);
+    }
+}
+
+//JAVA_多态
+
+
+
+
+
+
+
+
+
