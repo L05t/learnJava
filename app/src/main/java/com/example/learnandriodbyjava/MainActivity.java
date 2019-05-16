@@ -905,10 +905,66 @@ public class Overloading{
 //JAVA_多态
 
 
+public class Employee{
+    private String name;
+    private String address;
+    private int number;
+    public Employee(String name,String address,int number){
+        this.name = name;
+        this.address = address;
+        this.number = number;
+    }
 
+    public void mailCheck(){
+        System.out.print("");
+    }
 
+    public String toString (){
 
+    }
 
+    public String getName(){
+        return name;
+    }
 
+    public String getAddress(){
+        return address;
+    }
+    public void setAddress(String newAddress){
+        address = newAddress;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+}
+
+public class Salary extends Employee{
+    private double salary;
+    public Salary(String name, String address, int number, double salary) {
+        super(name,address,number);
+
+    }
+
+    public void mailCheck(){
+        System.out.print("");
+    }
+
+    public double getSalary(double newSalary){
+        if (newSalary>=0){
+            salary = newSalary;
+    }
+
+    public double computePay (){
+        System.out.print("for :"+getName());
+        return salary/52;
+    }
+}
+
+public class VirtualDemo{
+        public static void main(String[] args){
+            Salary s = new Salary("hah","北京",1000.0);
+        }
+}
 
 
