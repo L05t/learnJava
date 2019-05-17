@@ -1002,3 +1002,6 @@ public class MammalInt implements Animail{
 
     }
 }
+
+
+//JAVA_Package
