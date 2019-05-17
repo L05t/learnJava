@@ -968,3 +968,37 @@ public class VirtualDemo{
 }
 
 
+//JAVA_Encapsulation 封装
+
+public class EncapTest{
+        private String name;
+        private int age;
+        private int idNum;
+
+        public int getAge(){
+            return age;
+        }
+
+        public String getName(){
+            return name;
+        }
+
+        public int getIdNum(){
+            return idNum;
+        }
+
+        public void setName(String name){
+            this.name = name;
+        }
+
+        public void setIdNum(int idNum){
+            this.idNum = idNum;
+        }
+}
+
+//JAVA_接口
+public class MammalInt implements Animail{
+    public void eat(){
+
+    }
+}
