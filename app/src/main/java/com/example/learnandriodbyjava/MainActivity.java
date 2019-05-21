@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.*;
 import java.util.Calendar;
 import java.util.Date;
 import java.text.*;
@@ -1004,4 +1005,64 @@ public class MammalInt implements Animail{
 }
 
 
-//JAVA_Package
+//JAVA_数据结构
+
+/*
+枚举
+Enumeration
+
+位集合
+BitSet
+
+向量
+Vector
+
+栈
+stack
+
+字典
+Dictionary
+
+哈希表
+Hashtable
+
+属性
+properties
+
+*/
+
+
+public class JAVA_Array{
+
+    public static void main(String[] args) {
+        List<String> list = new ArrayList<String>();
+
+        list.add("");
+
+        for (String str: list) {
+            System.out.println(str);
+        }
+
+        String[] strArray = new String[list.size()];
+        list.toArray(strArray);
+        for(int i = 0;i < strArray.length;i ++){
+            System.out.println(strArray[i]);
+        }
+
+
+        Iterator<String> ite = list.iterator();
+        while (ite.hasNext()) {
+            System.out.println(ite.next());
+        }
+}
+
+public class JAVA_Map{
+    public static void main (String[] args){
+        Map<String,String> testmap = new HashMap<String, String>() {
+
+            testmap.put("1","value1");
+            testmap.put("2","value2");
+            testmap.put("3","value3");
+        }
+    }
+}
