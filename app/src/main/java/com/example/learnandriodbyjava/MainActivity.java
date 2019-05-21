@@ -1059,10 +1059,12 @@ public class JAVA_Array{
 public class JAVA_Map{
     public static void main (String[] args){
         Map<String,String> testmap = new HashMap<String, String>() {
-
             testmap.put("1","value1");
             testmap.put("2","value2");
             testmap.put("3","value3");
         }
     }
 }
+
+
+
