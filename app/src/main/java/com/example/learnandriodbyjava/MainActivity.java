@@ -1058,13 +1058,20 @@ public class JAVA_Array{
 
 public class JAVA_Map{
     public static void main (String[] args){
-        Map<String,String> testmap = new HashMap<String, String>() {
+        Map<String,String> testmap = new HashMap<String, String>();
             testmap.put("1","value1");
             testmap.put("2","value2");
             testmap.put("3","value3");
+        for (String key : testmap.keySet()){
+            System.out.println();
+
         }
     }
 }
 
-
+public class gitPushFunc{
+        public static void main (String[] args) {
+            System.out.println('git push master');
+        }
+}
 
